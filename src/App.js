@@ -26,7 +26,7 @@ function App() {
   function toggleTodo(id) {
     setTodos(todos.map(item => {
       if(item.id === id) {
-        item.complited = !item.complited
+        item.completed = !item.completed
       }
       return item
     })
@@ -41,7 +41,7 @@ function App() {
     setTodos(todos.concat([{
       title,
       id: Date.now(),
-      complited: false
+      completed: false
     }]))
   }
   return (

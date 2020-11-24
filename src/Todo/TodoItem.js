@@ -20,7 +20,7 @@ const styles = {
 function TodoItem({todo, index, onChange}) {
     const {removeTodo} = useContext(Context)
     const classes = []
-    if(todo.complited) {
+    if(todo.completed) {
         classes.push('done')
     }
     return (
@@ -28,7 +28,7 @@ function TodoItem({todo, index, onChange}) {
         <span className={classes.join(' ')}>
             <input style={styles.input} 
             type="checkbox"
-            checked={todo.complited} 
+            checked={todo.completed} 
             onChange={() => onChange(todo.id)}
             />
             <strong>{index + 1}</strong>
